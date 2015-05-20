@@ -11,12 +11,16 @@
   "author": "marmelab",
   "license": "Proprietary",
   "devDependencies": {
+    "bootstrap-sass": "^3.3.4",
     "css-loader": "^0.12.1",
     "extract-text-webpack-plugin": "^0.8.0",
+    "file-loader": "^0.8.1",
     "http-server": "^0.8.0",
+    "jquery": "^2.1.4",
     "node-libs-browser": "^0.5.0",
     "node-sass": "^3.1.1",
     "sass-loader": "^1.0.2",
+    "url-loader": "^0.5.5",
     "webpack": "^1.9.7",
     "webpack-dev-server": "^1.8.2"
   }

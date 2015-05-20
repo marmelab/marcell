@@ -22,6 +22,10 @@ module.exports = {
     module: {
         loaders: [
             {
+                test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+                loader: 'file?limit=100000'
+            },
+            {
                 test: /\.scss$/,
                 loader: ExtractTextPlugin.extract('css!sass')
             }

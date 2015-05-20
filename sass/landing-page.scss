@@ -1,3 +1,7 @@
-body {
-    background: yellow;
+$icon-font-path: '/../node_modules/bootstrap-sass/fonts/bootstrap/';
+
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+.highlighted {
+    background: silver;
 }
