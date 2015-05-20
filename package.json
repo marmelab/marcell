@@ -1,0 +1,23 @@
+{
+  "name": "marcell",
+  "version": "0.0.1",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "start": "http-server -p 3000",
+    "webpack": "webpack-dev-server --progress --colors",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "marmelab",
+  "license": "Proprietary",
+  "devDependencies": {
+    "css-loader": "^0.12.1",
+    "extract-text-webpack-plugin": "^0.8.0",
+    "http-server": "^0.8.0",
+    "node-libs-browser": "^0.5.0",
+    "node-sass": "^3.1.1",
+    "sass-loader": "^1.0.2",
+    "webpack": "^1.9.7",
+    "webpack-dev-server": "^1.8.2"
+  }
+}
