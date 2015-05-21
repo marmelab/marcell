@@ -1,8 +1,5 @@
-setup: initdb
+setup:
 	docker-compose run webpack npm install
-
-initdb:
-	docker-compose run database
 
 run:
 	docker-compose up
