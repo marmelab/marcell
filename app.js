@@ -6,6 +6,8 @@ var app = koa();
 
 app.use(koaMount('/', koaStatic(__dirname + '/public')));
 
+app.use(require('./middlewares/dbClient'));
+
 require('./controllers')(app);
 
 app.on('error', function(err) {
