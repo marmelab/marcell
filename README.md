@@ -3,8 +3,7 @@
 ## Development
 
 ``` sh
-npm run webpack
-npm start
+docker-compose up
 ```
 
 ## Production

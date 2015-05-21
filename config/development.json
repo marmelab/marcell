@@ -1,0 +1,7 @@
+{
+  "swig": {
+    "globals": {
+      "cdn": "http://localhost:8080/"
+    }
+  }
+}

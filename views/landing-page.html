@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Marcell</title>
-    <link rel="stylesheet" href="http://localhost:8080/public/css/landingPage.css"/>
+    <link rel="stylesheet" href="{{ cdn }}css/landingPage.css"/>
 </head>
 <body>
     <header class="container">
@@ -40,11 +40,11 @@
                                 </div>
 
                                 <!-- Controls -->
-                                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                <a class="left carousel-control" href="#event-manager-carousel" role="button" data-slide="prev">
                                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                                     <span class="sr-only">Previous</span>
                                 </a>
-                                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                <a class="right carousel-control" href="#event-manager-carousel" role="button" data-slide="next">
                                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                                     <span class="sr-only">Next</span>
                                 </a>
@@ -60,15 +60,14 @@
                                 <li>Bla bla blaBla bla blaBla bla blaBla bla blaBla bla blaBla bla blaBla bla bla</li>
                             </ul>
                             <p class="call-to-action">
-                                Register now!
-                                <button>Click here!</button>
+                                <button class="btn btn-danger">Get my beta account</button>
                             </p>
                         </div>
                     </div>
                 </article>
             </div>
         </div>
-        <article>
+        <article class="container">
             <div class="row">
                 <div class="col-md-6">
                     <img src="#" alt=""/>
@@ -85,9 +84,9 @@
             </div>
         </article>
     </section>
-    <footer>
+    <footer class="container">
         <p>Blabla du footer</p>
     </footer>
-    <script src="http://localhost:8080/public/js/landingPage.js"></script>
+    <script src="{{ cdn }}js/landingPage.js"></script>
 </body>
 </html>

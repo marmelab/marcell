@@ -1,0 +1,19 @@
+web:
+    image: iojs:1.6.3
+    volumes:
+        - .:/app
+    ports:
+        - "80:3000"
+    working_dir: /app
+    command: ./node_modules/nodemon/bin/nodemon.js --harmony app.js
+    links:
+      - "webpack"
+
+webpack:
+    image: iojs:1.6.3
+    volumes:
+        - .:/app
+    ports:
+        - "8080:8080"
+    working_dir: /app
+    command: npm run webpack

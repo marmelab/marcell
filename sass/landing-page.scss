@@ -1,7 +1,7 @@
-$icon-font-path: '/../node_modules/bootstrap-sass/fonts/bootstrap/';
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 .highlighted {
-    background: silver;
+    background: #ccc;
 }

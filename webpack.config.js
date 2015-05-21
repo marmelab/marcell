@@ -7,6 +7,7 @@ function getEntrySources(sources) {
 
     return sources;
 }
+var node_modules = require('path').resolve(__dirname, 'node_modules');
 
 module.exports = {
     entry: {
@@ -17,22 +18,25 @@ module.exports = {
     },
     output: {
         publicPath: 'http://localhost:8080/',
-        filename: 'public/js/[name].js'
+        filename: '/js/[name].js'
     },
     module: {
         loaders: [
             {
                 test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-                loader: 'file?limit=100000'
+                loader: 'file?name=fonts/[name].[ext]'
             },
             {
                 test: /\.scss$/,
-                loader: ExtractTextPlugin.extract('css!sass')
+                loader: ExtractTextPlugin.extract("css!sass?outputStyle=expanded&includePaths[]=" + node_modules + "/bootstrap-sass/assets/stylesheets/")
             }
         ]
     },
+    devServer: {
+        headers: { "Access-Control-Allow-Origin": "*" }
+    },
     plugins: [
-        new ExtractTextPlugin('/public/css/[name].css', {
+        new ExtractTextPlugin('/css/[name].css', {
             allChunks: true
         })
     ]
