@@ -28,7 +28,10 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                loader: ExtractTextPlugin.extract("css!sass?outputStyle=expanded&includePaths[]=" + node_modules + "/bootstrap-sass/assets/stylesheets/")
+                loader: ExtractTextPlugin.extract("css!sass?outputStyle=expanded&" +
+                    "includePaths[]=" + node_modules + "/bootstrap-sass/assets/stylesheets/&" +
+                    "includePaths[]=" + node_modules + "/compass-mixins/lib"
+                )
             }
         ]
     },

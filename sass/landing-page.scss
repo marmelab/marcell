@@ -2,6 +2,158 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
-.highlighted {
-    background: #ccc;
+@import "compass/css3/box-shadow";
+@import "compass/css3/text-shadow";
+
+$header-color: #607D88;
+$text-color: #212121;
+
+body {
+    font-family: "Open Sans";
+    font-size: 13px;
+    text-align: justify;
+}
+
+header {
+    @extend .container-fluid;
+    background: $header-color;
+    color: #fff;
+    & > div {
+        @extend .container;
+        h1 {
+            font-weight: normal;
+        }
+    }
+}
+
+.motto {
+    @extend .container;
+    margin: 50px auto;
+    h1 {
+        text-align: center;
+        span {
+            display: block;
+            margin-bottom: 15px;
+            &:first-child {
+                margin-left: -180px;
+            }
+            &:last-child {
+                margin-left: 180px;
+            }
+        }
+    }
+}
+
+.overview {
+    @extend .container-fluid;
+    background-color: #eee;
+    article {
+        @extend .container;
+        margin: 60px auto;
+        .carousel {
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.3); // @TODO: use mixin
+            @include box-shadow(rgba(0, 0, 0, 0.3) 0 0 12px);
+        }
+        h2 {
+            font-size: 24px;
+        }
+
+        .call-to-action {
+            margin-top: 40px;
+            text-align: center;
+            button {
+                @extend .btn;
+                @extend .btn-danger;
+                @extend .btn-lg;
+            }
+        }
+    }
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: bold;
+    font-family: 'Merriweather';
+}
+
+p {
+    line-height: 22px;
+}
+
+li {
+    margin-bottom: 4px;
+}
+
+.carousel {
+    .carousel-control {
+        background-image: none;
+    }
+    .carousel-caption {
+        background: rgba(0, 0, 0, 0.7);
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 10px 0 10px;
+    }
+}
+
+.testimonials {
+    @extend .container-fluid;
+    margin: 40px auto;
+    article {
+        @extend .container;
+        .testimonials {
+            @extend .row;
+            .testimonial {
+                @extend .col-md-6;
+                img {
+                    float: left;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+.features-section {
+    font-size: 0.9em;
+    background: #eee;
+    padding: 40px 0 40px;
+    article {
+        @extend .container;
+        .row {
+            width: 80%;
+            margin: 0 auto 40px;
+            .feature {
+                @extend .col-md-3;
+                text-align: center;
+                h3 {
+                    font-size: 1.5em;
+                }
+                span {
+                    text-align: center;
+                    font-size: 48px;
+                    color: #bbb;
+                }
+                p {
+                    color: #444;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    margin-top: 0;
+    background: $header-color;
+    color: #fff;
+    padding: 15px;
+    p {
+        @extend .container;
+        text-align: center;
+        margin-bottom: 0;
+    }
+}
+
+.clear {
+    clear: both;
 }
