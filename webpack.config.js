@@ -1,4 +1,6 @@
+var config = require('config');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var webpack = require('webpack');
 
 function getEntrySources(sources) {
     if (process.env.NODE_ENV !== 'production') {
@@ -13,6 +15,7 @@ module.exports = {
     entry: {
         landingPage: getEntrySources([
             './sass/landing-page.scss',
+            './js/analytics.js',
             './js/landing-page.js'
         ])
     },
@@ -39,6 +42,9 @@ module.exports = {
         headers: { "Access-Control-Allow-Origin": "*" }
     },
     plugins: [
+        new webpack.DefinePlugin({
+            GOOGLE_ANALYTICS_ID: '"' + config.tracking.google_analytics_id + '"'
+        }),
         new ExtractTextPlugin('/css/[name].css', {
             allChunks: true
         })

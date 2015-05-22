@@ -1,0 +1,10 @@
+{
+    "swig": {
+        "globals": {
+            "cdn": "http://localhost:8080/"
+        }
+    },
+    "tracking": {
+        "google_analytics_id": "UA-00000000-0"
+    }
+}
