@@ -10,5 +10,8 @@
         "globals": {
             "cdn": "/"
         }
+    },
+    "tracking": {
+        "google_analytics_id": "UA-00000000-0"
     }
 }
