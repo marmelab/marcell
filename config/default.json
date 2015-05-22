@@ -1,4 +1,11 @@
 {
+    "database": {
+        "host": "database",
+        "port": 5432,
+        "username": "marcell",
+        "password": "",
+        "name": "marcell"
+    },
     "swig": {
         "globals": {
             "cdn": "/"
