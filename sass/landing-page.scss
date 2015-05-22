@@ -34,11 +34,13 @@ header {
         span {
             display: block;
             margin-bottom: 15px;
-            &:first-child {
-                margin-left: -180px;
-            }
-            &:last-child {
-                margin-left: 180px;
+            @media (min-width: $screen-sm-min) {
+                &:first-child {
+                    margin-left: -180px;
+                }
+                &:last-child {
+                    margin-left: 180px;
+                }
             }
         }
     }
