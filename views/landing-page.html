@@ -61,7 +61,7 @@
                             <li>Bla bla blaBla bla blaBla bla blaBla bla blaBla bla blaBla bla blaBla bla bla</li>
                         </ul>
                         <p class="call-to-action">
-                            <button class="btn btn-danger">Get my beta account</button>
+                            <button class="btn btn-danger" data-toggle="modal" data-target="#beta-form-modal">Get my beta account</button>
                         </p>
                     </div>
                 </div>
@@ -125,6 +125,32 @@
     <footer class="container-fluid">
         <p>marcell.io - All rights reserved.</p>
     </footer>
+    <div class="modal fade" id="beta-form-modal" tabindex="-1" role="dialog" aria-labelledby="BetaFormModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <form id="beta_form" action="/landing-page" method="POST">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Beta Registration</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-content">
+                            <p>To be among the firsts to test our solution, please give us your email address.</p>
+                            <p class="form-group">
+                                <label for="email">Email address</label>
+                                <input type="email" class="form-control" name="email" id="email" required="required" placeholder="john.doe@foobarcompany.com">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" data-dismiss="modal">Cancel</button>
+                        <button id="beta_form_submit" type="submit" disabled="disabled">Register</button>
+                        <button id="beta_form_close" type="button" class="btn-primary" data-dismiss="modal" style="display: none;">Close</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
     <script src="{{ cdn }}js/landingPage.js"></script>
 </body>
 </html>
