@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Misocell</title>
-    <link href='http://fonts.googleapis.com/css?family=Yellowtail' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One|Inconsolata:400,700|Fjalla+One|Alegreya' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ cdn }}css/landingPage.css"/>
@@ -12,21 +12,29 @@
 <body>
     <header>
         <div>
-            <h1 style="font-family: 'Yellowtail', cursive;">misocell.io</h1>
+            <h1>misocell.io</h1>
         </div>
     </header>
     <section>
         <div class="motto">
-            <h1>
-                <span>“Your Business is Data-Driven.</span>
-                <span>We Make you a Better Pilot!”</span>
-            </h1>
+            <div class="row">
+                <div class="blockquote">
+                    <h1>
+                        “Your Business is Data-Driven. <br/>
+                        We Make you a Better Pilot!”
+                    </h1>
+                    <p class="author">François Zaninotto, CEO</p>
+                </div>
+                <div class="picture">
+                    <img src="img/francois-zaninotto.jpg" alt="François Zaninotto, Misocell CEO" title="François Zaninotto, CEO" />
+                </div>
+            </div>
         </div>
         <div class="overview">
             <article>
                 <div class="row">
                     <div class="col-md-8">
-                        <div id="event-manager-carousel" class="carousel slide" data-interval="3500" data-ride="carousel">
+                        <div id="event-manager-carousel" class="carousel slide" data-interval="5000" data-ride="carousel">
                             <div class="carousel-inner" role="listbox">
                                 <div class="item active">
                                     <img src="/img/use-cases/event-manager/list.png" alt="Get a list of all your events in a single place">
@@ -52,12 +60,24 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-4" contenteditable="true" style="border: 2px solid red; box-sizing: border-box;">
+                    <div class="col-md-4">
                         <h2>Connect. Combine. Manage.</h2>
-                        <p>Forget about multiple admin backends with boring interfaces. Gather business data from various live datasources, display them all in a single, beautiful UI, query and modify the data driving your business in minutes.</p>
-                        <p>Combine your data sources and manage live data from one single point, it is as simple as that.</p>
+                        <p>
+                            Forget about multiple admin backends with boring interfaces. Gather business data from softwares
+                            used in the company or coming from web-based services, display them all in a single, beautiful UI,
+                            query and modify the data driving your business in minutes.
+                        </p>
+
+                        <ul>
+                            <li><strong>Connect</strong> to various live datasources</li>
+                            <li><strong>Combine</strong> your business data</li>
+                            <li><strong>Manage</strong> live data from one single point</li>
+                        </ul>
+
+                        <p>It is as simple as that. Do you want to try?</p>
+
                         <p class="call-to-action">
-                            <button id="beta_form_open_button" class="btn btn-danger">Get my beta account</button>
+                            <button id="beta_form_open_button">Get my beta account</button>
                         </p>
                     </div>
                 </div>
@@ -67,17 +87,18 @@
             <article>
                 <div class="testimonials">
                     <div class="testimonial">
-                        <img src="http://lorempixel.com/g/155/168/" alt=""/>
+                        <img src="https://cdn2.iconfinder.com/data/icons/flat-seo-web-ikooni/128/flat_seo-23-128.png" alt=""/>
                         <h3>Testimonial</h3>
-                        <p>Surprisingly, it has been really easy to put together data coming from our website, financial data from our billing software, and Mailchimp, an online tool where we manage our Marketing campaigns. This resulted in a better efficiency of our sales process.</p>
+                        <p>It has been really easy to put together data coming from our website, financial data from our billing software, and Mailchimp, an online tool to manage Marketing campaigns. This resulted in a better efficiency of our sales process.</p>
                         <p class="author">Mark E.</p>
                         <div class="clear"></div>
                     </div>
                     <div class="testimonial">
-                        <img src="http://lorempixel.com/a/155/168/" alt=""/>
+                        <img src="https://cdn2.iconfinder.com/data/icons/flat-seo-web-ikooni/128/flat_seo-34-128.png" alt=""/>
                         <h3>More info</h3>
                         <p>Tired of ugly admin interfaces? Personalize your management tool with this highly configurable interface.</p>
                         <p>Lost in the amount of your data? Only display the informations you need to see and rearrange them on-the-go.</p>
+                        <p><a href="#">Read more &raquo;</a></p>
                         <div class="clear"></div>
                     </div>
                 </div>
@@ -87,34 +108,46 @@
             <article>
                 <div class="row">
                     <div class="feature">
-                        <span class="glyphicon glyphicon-th-list"></span>
+                        <img src="https://cdn2.iconfinder.com/data/icons/flat-seo-web-ikooni/128/flat_seo2-05-128.png" />
                         <h3>Data Management</h3>
-                        <p>Lorem ipsum dolor sit nam officia qui. Animi, eum libero minima numquam possimus quibusdam! Aliquam blanditiis eaque, et libero optio porro veritatis. Earum?</p>
+                        <p>Administer your data in an ergonomic, unified, and blazing fast interface.</p>
                     </div>
-                    <div class="col-md-1"></div>
                     <div class="feature">
-                        <span class="glyphicon glyphicon-transfer"></span>
+                        <img src="https://cdn2.iconfinder.com/data/icons/flat-seo-web-ikooni/128/flat_seo2-36-128.png" />
                         <h3>Cross-sources Aggregator</h3>
-                        <p>Lorem ipsum dolor sit ur adipisicing elit. Consequuntur excepturi fugiat nam officia qui. Animi, eum libero minima numquam possimus quibusdam! Aliquam blanditiis eaque, et libero optio porro veritatis. Earum?</p>
+                        <p>Combine different data sources to extract the very essence of your data.</p>
                     </div>
-                    <div class="col-md-1"></div>
                     <div class="feature">
-                        <span class="glyphicon glyphicon-stats"></span>
-                        <h3>Business Reporting</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetliquam blanditiis eaque, et libero optio porro veritatis. Earum?</p>
+                        <img src="https://cdn2.iconfinder.com/data/icons/flat-seo-web-ikooni/128/flat_seo-44-128.png" />
+                        <h3>Business Report</h3>
+                        <p>Visualize all your big numbers into clear and easy-to-build charts.</p>
+                    </div>
+                    <div class="feature">
+                        <img src="https://cdn2.iconfinder.com/data/icons/flat-seo-web-ikooni/128/flat_seo-13-128.png" />
+                        <h3>Mobile Devices</h3>
+                        <p>Access your data from everywhere, with our mobile device compatible interface.</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="feature">
-                        <span class="glyphicon glyphicon-phone"></span>
-                        <h3>Mobile Devices</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. imus quibusdam! Aliquam blanditiis eaque, et libero optio porro veritatis. Earum?</p>
+                        <img src="https://cdn2.iconfinder.com/data/icons/flat-seo-web-ikooni/128/flat_seo3-11-128.png" />
+                        <h3>Team collaboration</h3>
+                        <p>Fine-access tuning and enterprise offers for a better collaborative work.</p>
                     </div>
-                    <div class="col-md-1"></div>
                     <div class="feature">
-                        <span class="glyphicon glyphicon-phone-alt"></span>
-                        <h3>High-Level Support</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. imus quibusdam! Aliquam blanditiis eaque, et libero optio porro veritatis. Earum?</p>
+                        <img src="https://cdn2.iconfinder.com/data/icons/flat-seo-web-ikooni/128/flat_seo2-27-128.png" />
+                        <h3>Security</h3>
+                        <p>Your data are sensitive and are yours: we will never store them on our side.</p>
+                    </div>
+                    <div class="feature">
+                        <img src="https://cdn2.iconfinder.com/data/icons/flat-seo-web-ikooni/128/flat_seo-25-128.png" />
+                        <h3>Customizable Interface</h3>
+                        <p>Adapt our design to your company standards. Your users won't be disoriented anymore.</p>
+                    </div>
+                    <div class="feature">
+                        <img src="https://cdn2.iconfinder.com/data/icons/flat-seo-web-ikooni/128/flat_seo2-18-128.png" />
+                        <h3>Customer Support</h3>
+                        <p>We are working for our customers. Feel free to ask us any question!</p>
                     </div>
                 </div>
             </article>

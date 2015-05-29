@@ -1,27 +1,32 @@
 $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 
+$brand-primary: #F2BA34;
+$text-color: #212121;
+
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 @import "compass/css3/box-shadow";
-@import "compass/css3/text-shadow";
-
-$header-color: #607D88;
-$text-color: #212121;
 
 body {
     font-family: "Open Sans";
-    font-size: 13px;
     text-align: justify;
 }
 
 header {
     @extend .container-fluid;
-    background: $header-color;
+    padding: 20px 0;
+    background: #353B41;
     color: #fff;
     & > div {
         @extend .container;
+        height: 100%;
         h1 {
             font-weight: normal;
+            height: 100%;
+            line-height: 100%;
+            margin: 0;
+            font-family: "Poiret One";
+            font-size: 3.5em;
         }
     }
 }
@@ -29,26 +34,32 @@ header {
 .motto {
     @extend .container;
     margin: 50px auto;
-    h1 {
-        text-align: center;
-        span {
-            display: block;
-            margin-bottom: 15px;
-            @media (min-width: $screen-sm-min) {
-                &:first-child {
-                    margin-left: -180px;
-                }
-                &:last-child {
-                    margin-left: 180px;
-                }
-            }
+    .blockquote {
+        @extend .col-md-8;
+        text-align: right;
+        h1 {
+            line-height: 1.5em;
+        }
+        .author {
+            color: #999;
+            font-size: 1.5em;
+            padding-right: 30px;
+        }
+    }
+    .picture {
+        @extend .col-md-4;
+        img {
+            width: 190px;
+            border-radius: 100px;
         }
     }
 }
 
 .overview {
     @extend .container-fluid;
-    background-color: #eee;
+    font-size: 1.1em;
+    color: #423838;
+    background-color: $brand-primary;
     article {
         @extend .container;
         margin: 60px auto;
@@ -61,12 +72,17 @@ header {
         }
 
         .call-to-action {
+            $callToActionColor: #EF211B;
             margin-top: 40px;
             text-align: center;
             button {
-                @extend .btn;
-                @extend .btn-danger;
                 @extend .btn-lg;
+                background-color: $callToActionColor;
+                &:hover {
+                    background-color: darken($callToActionColor, 5);
+                }
+                color: #fff;
+                outline: none;
             }
         }
     }
@@ -78,7 +94,11 @@ h1, h2, h3, h4, h5 {
 }
 
 p {
-    line-height: 22px;
+    line-height: 1.5em;
+}
+
+ul {
+    margin: 24px 0;
 }
 
 li {
@@ -108,15 +128,22 @@ button {
 .testimonials {
     @extend .container-fluid;
     margin: 40px auto;
+    h3 {
+        margin-top: 0;
+    }
     article {
         @extend .container;
         .testimonials {
             @extend .row;
             .testimonial {
                 @extend .col-md-6;
+                padding-right: 40px;
                 img {
                     float: left;
-                    margin-right: 10px;
+                    margin: 30px 10px 0 0;
+                }
+                .author {
+                    text-align: right;
                 }
             }
         }
@@ -124,24 +151,17 @@ button {
 }
 
 .features-section {
-    font-size: 0.9em;
     background: #eee;
     padding: 40px 0 40px;
     article {
         @extend .container;
         .row {
-            width: 80%;
-            margin: 0 auto 40px;
+            margin-bottom: 50px;
             .feature {
                 @extend .col-md-3;
                 text-align: center;
                 h3 {
-                    font-size: 1.5em;
-                }
-                span {
-                    text-align: center;
-                    font-size: 48px;
-                    color: #bbb;
+                    font-size: 1.2em;
                 }
                 p {
                     color: #444;
@@ -153,7 +173,7 @@ button {
 
 footer {
     margin-top: 0;
-    background: $header-color;
+    background: #353B41;
     color: #fff;
     padding: 15px;
     p {
@@ -165,4 +185,17 @@ footer {
 
 .clear {
     clear: both;
+}
+
+.modal {
+    .modal-header {
+        background-color: #353B41;
+        color: #fff;
+        .close {
+            color: #fff;
+        }
+    }
+    .modal-footer {
+        background-color: #eee;
+    }
 }
