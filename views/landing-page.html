@@ -4,155 +4,169 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Misocell</title>
-    <link href='http://fonts.googleapis.com/css?family=Poiret+One|Inconsolata:400,700|Fjalla+One|Alegreya' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ cdn }}css/landingPage.css"/>
 </head>
-<body contenteditable="true">
+<body>
     <header>
-        <div>
-            <h1>misocell.io</h1>
-        </div>
+        {% include "navbar.html" %}
     </header>
     <section>
-        <div class="motto">
-            <div class="row">
-                <div class="blockquote">
-                    <h1>
-                        “Your Business is Data-Driven. <br/>
-                        We Make you a Better Pilot!”
-                    </h1>
-                    <p class="author">François Zaninotto, CEO</p>
+        <div class="overview" id="overview">
+            <article>
+                <h2>An Admin Panel in Minutes ‐ No Developer Required!</h2>
+                <div class="video">
+                    <img class="responsive" src="http://placehold.it/1280x720" alt="Create an admin panel in minutes, no developer required!" title="Launch video overview" />
+                    <span class="play"></span>
                 </div>
-                <div class="picture">
-                    <img src="img/francois-zaninotto.jpg" alt="François Zaninotto, Misocell CEO" title="François Zaninotto, CEO" />
+                <div class="call-to-action">
+                    <button>Subscribe now to private beta!</button>
+                </div>
+            </article>
+        </div>
+        <div class="main-feature" id="description">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>Create your own interface for your own needs!</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque eos explicabo incidunt minus quae quos veritatis voluptas? Adipisci deserunt eaque exercitationem fugit magni non obcaecati quam repudiandae sint voluptatibus.</p>
+                </div>
+                <div class="col-md-4">
+                    <img class="placeholder" src="http://placehold.it/350x300" alt="" class="responsive"/>
                 </div>
             </div>
         </div>
-        <div class="overview">
-            <article>
+        <div class="main-feature">
+            <div class="row">
+                <div class="col-md-4">
+                    <img class="placeholder" src="http://placehold.it/350x300" alt="" class="responsive"/>
+                </div>
+                <div class="col-md-8">
+                    <h2>Advanced Data Visualization Features</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque eos explicabo incidunt minus quae quos veritatis voluptas? Adipisci deserunt eaque exercitationem fugit magni non obcaecati quam repudiandae sint voluptatibus.</p>
+                </div>
+            </div>
+        </div>
+        <div class="main-feature">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>Plug to Public API with Ease</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque eos explicabo incidunt minus quae quos veritatis voluptas? Adipisci deserunt eaque exercitationem fugit magni non obcaecati quam repudiandae sint voluptatibus.</p>
+                </div>
+                <div class="col-md-4">
+                    <img class="placeholder" src="http://placehold.it/350x300" alt="" class="responsive"/>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-compliant">
+            <div class="container">
                 <div class="row">
-                    <div class="col-md-8">
-                        <div id="event-manager-carousel" class="carousel slide" data-interval="5000" data-ride="carousel">
-                            <div class="carousel-inner" role="listbox">
-                                <div class="item active">
-                                    <img src="/img/use-cases/event-manager/list.png" alt="Get a list of all your events in a single place">
-                                    <div class="carousel-caption">Get a list of all your events in a single place</div>
-                                </div>
-                                <div class="item">
-                                    <img src="/img/use-cases/event-manager/create.png" alt="Dispose of powerful admin panel to store and share your data">
-                                    <div class="carousel-caption">Dispose of powerful admin panel to store and share your data</div>
-                                </div>
-                                <div class="item">
-                                    <img src="/img/use-cases/event-manager/show.png" alt="Monitor data across several sources">
-                                    <div class="carousel-caption">Monitor data across several sources</div>
-                                </div>
-                            </div>
-
-                            <a class="left carousel-control" href="#event-manager-carousel" role="button" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="right carousel-control" href="#event-manager-carousel" role="button" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-                    </div>
                     <div class="col-md-4">
-                        <h2>Connect. Combine. Manage. No developer required.</h2>
-                        <p>Forget about switching between multiple admin interfaces.</p>
-                        <p>Misocell lets you gather business data from your servers, with fine-grained access control.</p>
-                        <p>Display all your business data in a single, beautiful UI.</p>
-                        <p>query and modify the data driving your business in minutes.
-                        </p>
-
-                        <p>All that through a web interface, with zero development. Do you want to try?</p>
-
-                        <p class="call-to-action">
-                            <button id="beta_form_open_button">Grab a beta account</button>
-                        </p>
+                        <img class="placeholder" src="http://placehold.it/350x600" alt="" class="responsive"/>
+                    </div>
+                    <div class="col-md-8">
+                        <h2>Access Your Data From Everywhere</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda, autem illo laudantium libero modi molestiae, nemo possimus quas quia sed ut vero? At ducimus excepturi, inventore maxime perferendis provident!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, ab accusamus amet aperiam architecto autem delectus dignissimos exercitationem illum minima nemo odit provident quasi quidem repellat repudiandae unde ut voluptatem?</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, ab accusamus amet aperiam architecto autem delectus dignissimos exercitationem illum minima nemo odit provident quasi quidem repellat repudiandae unde ut voluptatem?</p>
                     </div>
                 </div>
-            </article>
+            </div>
         </div>
-        <div class="testimonials">
-            <article>
-                <div class="testimonials">
-                    <div class="testimonial">
-                        <img src="https://cdn2.iconfinder.com/data/icons/flat-seo-web-ikooni/128/flat_seo-23-128.png" alt=""/>
-                        <h3>Testimonial</h3>
-                        <p>“I managed to put together data coming from our website, our billing software, and Mailchimp, in a couple hours.
-                            It made me more efficient at managing my sales process. Without spending a single dollar in developer time” &dash; Mark E.</p>
-                        <div class="clear"></div>
-                    </div>
-                    <div class="testimonial">
-                        <img src="https://cdn2.iconfinder.com/data/icons/flat-seo-web-ikooni/128/flat_seo-34-128.png" alt=""/>
-                        <h3>More info</h3>
-                        <p>"It's like a spreadsheet connected live to my business data"</p>
-                        <p>"Now, each time I see an admin interface, I feel like tweaking it to let me work faster"</p>
-                        <p>"My employees used to spend hours importing/exporting data between Excel and online tools. Now they work directly on live data, from their browsers, with ease."</p>
-
-
-                        <p>Lost in the amount of your data? Only display the informations you need to see and rearrange them on-the-go.</p>
-                        <p><a href="#">Read more &raquo;</a></p>
-                        <div class="clear"></div>
-                    </div>
+        <div id="usecases" class="usecases">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Use Case #1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dicta dolor dolore harum ipsa itaque nulla perspiciatis porro! Cupiditate, inventore neque? Enim eveniet hic id praesentium quo saepe suscipit unde?</p>
+                    <img class="placeholder" src="http://placehold.it/350x300" alt="" class="responsive"/>
                 </div>
-            </article>
+                <div class="col-md-4">
+                    <h3>Use Case #2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dicta dolor dolore harum ipsa itaque nulla perspiciatis porro! Cupiditate, inventore neque? Enim eveniet hic id praesentium quo saepe suscipit unde?</p>
+                    <img class="placeholder" src="http://placehold.it/350x300" alt="" class="responsive"/>
+                </div>
+                <div class="col-md-4">
+                    <h3>Use Case #3</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dicta dolor dolore harum ipsa itaque nulla perspiciatis porro! Cupiditate, inventore neque? Enim eveniet hic id praesentium quo saepe suscipit unde?</p>
+                    <img class="placeholder" src="http://placehold.it/350x300" alt="" class="responsive"/>
+                </div>
+            </div>
         </div>
-        <div class="features-section">
+        <div class="features" id="features">
             <article>
                 <div class="row">
                     <div class="feature">
-                        <img src="https://cdn2.iconfinder.com/data/icons/flat-seo-web-ikooni/128/flat_seo2-05-128.png" />
-                        <h3>Data Management</h3>
-                        <p>Read and edit your data in an usable, unified, and blazing fast interface.</p>
+                        <img class="placeholder" src="http://placehold.it/72x72" alt="" class="responsive"/>
+                        <h3>Feature</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab delectus dignissimos ex maiores minus molestiae nulla quidem unde vitae voluptas! Dicta dolor nobis non quae quos sequi sunt totam voluptates.</p>
                     </div>
                     <div class="feature">
-                        <img src="https://cdn2.iconfinder.com/data/icons/flat-seo-web-ikooni/128/flat_seo2-36-128.png" />
-                        <h3>Cross-sources Aggregator</h3>
-                        <p>Combine different data sources to extract the very essence of your data.</p>
+                        <img class="placeholder" src="http://placehold.it/72x72" alt="" class="responsive"/>
+                        <h3>Feature</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab delectus dignissimos ex maiores minus molestiae nulla quidem unde vitae voluptas! Dicta dolor nobis non quae quos sequi sunt totam voluptates.</p>
                     </div>
                     <div class="feature">
-                        <img src="https://cdn2.iconfinder.com/data/icons/flat-seo-web-ikooni/128/flat_seo-44-128.png" />
-                        <h3>Business Report</h3>
-                        <p>Visualize all your big numbers into clear and easy-to-build charts.</p>
-                    </div>
-                    <div class="feature">
-                        <img src="https://cdn2.iconfinder.com/data/icons/flat-seo-web-ikooni/128/flat_seo-13-128.png" />
-                        <h3>Mobile Devices</h3>
-                        <p>Access your data from everywhere, with our mobile device compatible interface.</p>
+                        <img class="placeholder" src="http://placehold.it/72x72" alt="" class="responsive"/>
+                        <h3>Feature</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab delectus dignissimos ex maiores minus molestiae nulla quidem unde vitae voluptas! Dicta dolor nobis non quae quos sequi sunt totam voluptates.</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="feature">
-                        <img src="https://cdn2.iconfinder.com/data/icons/flat-seo-web-ikooni/128/flat_seo3-11-128.png" />
-                        <h3>Team collaboration</h3>
-                        <p>Restrict access to resources based on simple role definitions, for a more effective collaboration.</p>
+                        <img class="placeholder" src="http://placehold.it/72x72" alt="" class="responsive"/>
+                        <h3>Feature</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab delectus dignissimos ex maiores minus molestiae nulla quidem unde vitae voluptas! Dicta dolor nobis non quae quos sequi sunt totam voluptates.</p>
                     </div>
                     <div class="feature">
-                        <img src="https://cdn2.iconfinder.com/data/icons/flat-seo-web-ikooni/128/flat_seo2-27-128.png" />
-                        <h3>Security</h3>
-                        <p>Your data is valuable, and you're worried about leaks. Rest assured, misocell never stores your data.</p>
+                        <img class="placeholder" src="http://placehold.it/72x72" alt="" class="responsive"/>
+                        <h3>Feature</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab delectus dignissimos ex maiores minus molestiae nulla quidem unde vitae voluptas! Dicta dolor nobis non quae quos sequi sunt totam voluptates.</p>
                     </div>
                     <div class="feature">
-                        <img src="https://cdn2.iconfinder.com/data/icons/flat-seo-web-ikooni/128/flat_seo-25-128.png" />
-                        <h3>Customizable Interface</h3>
-                        <p>Adapt misocell design to your company standards. Your users won't be disoriented.</p>
-                    </div>
-                    <div class="feature">
-                        <img src="https://cdn2.iconfinder.com/data/icons/flat-seo-web-ikooni/128/flat_seo2-18-128.png" />
-                        <h3>Customer Support</h3>
-                        <p>When it doesn't work as you expect, what you need is a person, not a search engine</p>
+                        <img class="placeholder" src="http://placehold.it/72x72" alt="" class="responsive"/>
+                        <h3>Feature</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab delectus dignissimos ex maiores minus molestiae nulla quidem unde vitae voluptas! Dicta dolor nobis non quae quos sequi sunt totam voluptates.</p>
                     </div>
                 </div>
             </article>
+        </div>
+        <div class="call-to-action-section">
+            <h3>Sign up for the private beta!</h3>
+            <p>We just launched our <strong>private beta</strong>! Become an early bird and benefit from exclusive discounts by registering now!</p>
+            <p class="call_to_action"><button>Sign up now!</button></p>
         </div>
     </section>
     <footer class="container-fluid">
-        <p>misocell.io - All rights reserved.</p>
+        <div class="container">
+            <div class="col-md-3">
+                <h5>misocell.io</h5>
+            </div>
+            <div class="col-md-3">
+                <h5>Links</h5>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Terms and conditions</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>Social networks</h5>
+                <ul class="social-networks">
+                    <li><img class="placeholder" src="http://placehold.it/48x48" alt="" class="responsive"/></li>
+                    <li><img class="placeholder" src="http://placehold.it/48x48" alt="" class="responsive"/></li>
+                    <li><img class="placeholder" src="http://placehold.it/48x48" alt="" class="responsive"/></li>
+                    <li><img class="placeholder" src="http://placehold.it/48x48" alt="" class="responsive"/></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>Contact</h5>
+                <ul class="list-unstyled">
+                    <li><a href="mailto:{{ contact.email }}"><span class="glyphicon glyphicon-envelope"></span> {{ contact.email }}</a></li>
+                    <li><span class="glyphicon glyphicon-earphone"></span> +33 (0)00 000 0000</li>
+                </ul>
+            </div>
+        </div>
     </footer>
     <div class="modal fade" id="beta-form-modal" tabindex="-1" role="dialog" aria-labelledby="BetaFormModal" aria-hidden="true">
         <div class="modal-dialog">

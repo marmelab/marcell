@@ -1,0 +1,44 @@
+@import "variables";
+@import "layout";
+
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Open Sans";
+    text-align: justify;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: bold;
+    font-family: 'Poiret One';
+}
+
+p {
+    line-height: 1.5em;
+}
+
+ul {
+    margin: 24px 0;
+}
+
+li {
+    margin-bottom: 4px;
+}
+
+button {
+    @extend .btn;
+    &[type="submit"] {
+        @extend .btn-primary;
+    }
+}
+
+.clear {
+    clear: both;
+}
+
+.responsive {
+    max-width: 100%;
+}

@@ -14,6 +14,7 @@ var node_modules = require('path').resolve(__dirname, 'node_modules');
 module.exports = {
     entry: {
         landingPage: getEntrySources([
+            './sass/style.scss',
             './sass/landing-page.scss',
             './js/analytics.js',
             './js/landing-page.js'

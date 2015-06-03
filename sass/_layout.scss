@@ -1,0 +1,44 @@
+body {
+    padding-top: 40px;
+}
+
+header {
+    .navbar {
+        margin-bottom: 0;
+        @extend .navbar-fixed-top;
+    }
+    .navbar-default {
+        background: $black;
+        border: 0;
+        a {
+            color: #fff !important;
+        }
+        .navbar-brand {
+            font-family: $title-font;
+            font-size: 3em;
+        }
+    }
+    .navbar-nav > li > a {
+        padding-top: 18px;
+        padding-bottom: 12px;
+    }
+}
+
+footer {
+    margin-top: 0;
+    background: #353B41;
+    color: #fff;
+    padding: 30px 0;
+    h5 {
+        font-family: inherit;
+    }
+    p {
+        @extend .container;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .social-networks {
+        @extend .list-unstyled;
+        @extend .list-inline;
+    }
+}
