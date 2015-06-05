@@ -15,8 +15,8 @@ sass:
 
 config:
     assets:
-        base_url: http://localhost:8080/
+        base_url: /
     tracking:
-        google_analytics_id: UA-00000000-0
+        google_analytics_id: UA-63305726-1
     contact:
-        email: john.doe@foobarcompany.com
+        email: contact@misocell.io

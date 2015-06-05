@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow"/>
     <title>Misocell</title>
     <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="{{ site.config.assets.base_url }}/css/{{ page.style }}"/>
+    <link rel="stylesheet" href="{{ site.config.assets.base_url }}build/{{ page.style }}"/>
 </head>
 <body>
     <header>{% include navbar.html %}</header>
@@ -21,6 +22,6 @@
         ga('create', '{{ site.config.tracking.google_analytics_id }}', 'auto');
         ga('send', 'pageview');
     </script>
-    <script src="{{ site.config.assets.base_url }}/js/{{ page.javascript }}"></script>
+    <script src="{{ site.config.assets.base_url }}build/{{ page.javascript }}"></script>
 </body>
 </html>

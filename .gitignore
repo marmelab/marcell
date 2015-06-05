@@ -1,6 +1,8 @@
 _config.yml
 _site
 .sass-cache
+build/
 bower_components/
+fonts/
 node_modules/
 npm-debug.log
