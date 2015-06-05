@@ -10,10 +10,10 @@ header {
         @extend .navbar-fixed-top;
     }
     .navbar-default {
-        background: $black;
+        background: $brand-primary;
         border: 0;
         a {
-            color: #fff !important;
+            color: $brand-primary-text !important;
         }
         .navbar-brand {
             font-family: $title-font;
