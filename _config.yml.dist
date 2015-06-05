@@ -1,0 +1,19 @@
+exclude:
+    - bower_components
+    - bower.json
+    - makefile
+    - node_modules
+    - npm-debug.log
+    - package.json
+    - sass
+
+sass:
+    style: :compressed
+
+config:
+    assets:
+        base_url: http://localhost:8080
+    tracking:
+        google_analytics_id: UA-00000000-0
+    contact:
+        email: john.doe@foobarcompany.com

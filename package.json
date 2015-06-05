@@ -1,0 +1,31 @@
+{
+  "name": "misocell.io",
+  "version": "0.2.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marmelab/marcell.git"
+  },
+  "author": "marmelab <contact@marmelab.com>",
+  "license": "proprietary",
+  "bugs": {
+    "url": "https://github.com/marmelab/marcell/issues"
+  },
+  "homepage": "https://github.com/marmelab/marcell",
+  "devDependencies": {
+    "compass-mixins": "^0.12.7",
+    "css-loader": "^0.14.4",
+    "file-loader": "^0.8.4",
+    "jquery": "^2.1.4",
+    "node-libs-browser": "^0.5.2",
+    "node-sass": "^3.1.2",
+    "sass-loader": "^1.0.2",
+    "style-loader": "^0.12.3",
+    "webpack": "^1.9.10",
+    "webpack-dev-server": "^1.9.0"
+  }
+}

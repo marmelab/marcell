@@ -1,8 +1,5 @@
-setup:
-	docker-compose run webpack npm install
+serve:
+	@docker run --rm -v "$$PWD:/src" -p 4000:4000 grahamc/jekyll serve -H 0.0.0.0
 
-run:
-	docker-compose up
-
-test:
-	docker-compose run web npm test
+webpack:
+	@./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --colors --host=0.0.0.0
