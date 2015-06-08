@@ -28,18 +28,24 @@ $(document).on('ready', function() {
 
     var lambda = new AWS.Lambda({
         region: 'eu-west-1',
-        accessKeyId: '',
-        secretAccessKey: ''
+        accessKeyId: 'xxx',
+        secretAccessKey: 'xxx'
     });
 
     $('#beta_form').on('submit', function(e) {
         e.preventDefault();
 
+        var email = $('#email').val();
+        ga('send', 'event', 'BETA_SUBSCRIPTION_FORM_SENT', email);
+
         var form = $(this);
+        var payload = {
+            email: email
+        };
 
         lambda.invoke({
-            FunctionName: 'Misocell_SendBetaRegistration',
-            Payload: form.serialize()
+            FunctionName: 'Misocell_SendBetaSubscription',
+            Payload: JSON.stringify(payload)
         }, function(err) {
             if (err) {
                 return feedback(form, 'danger', err);
