@@ -42,6 +42,10 @@ button {
     max-width: 100%;
 }
 
+// Make iframe and objects responsive
+.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin-bottom: 20px; }
+.embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
 // Fixing Bootstrap issue (see https://github.com/twbs/bootstrap/issues/14040)
 .modal-open .navbar-fixed-top {
     padding-right: 15px;

@@ -100,3 +100,20 @@
     @extend .container;
     padding: 40px 0;
 }
+
+#video-modal {
+    .modal-dialog {
+        width: 90%;
+        height: 95%;
+        padding: 0;
+    }
+
+    .modal-content {
+        height: 90%;
+        border-radius: 0;
+    }
+
+    .modal-body {
+        padding: 0;
+    }
+}
