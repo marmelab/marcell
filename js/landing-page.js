@@ -12,43 +12,41 @@ $(document).on('ready', function() {
         $('#beta-form-modal').modal('show');
     });
 
+    var feedback = function(form, type, message) {
+        form.find('.alert').remove();
+
+        var feedbackContainer = '<div class="alert alert-##TYPE## alert-dismissible fade in" role="alert">' +
+            '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>' +
+            '##CONTENT##' +
+            '</div>';
+
+        feedbackContainer = feedbackContainer.replace('##TYPE##', type);
+        feedbackContainer = feedbackContainer.replace('##CONTENT##', message);
+
+        form.find('.modal-body').prepend(feedbackContainer);
+    };
+
+    var lambda = new AWS.Lambda({
+        region: 'eu-west-1',
+        accessKeyId: '',
+        secretAccessKey: ''
+    });
+
     $('#beta_form').on('submit', function(e) {
         e.preventDefault();
 
-        var feedback = function(form, type, message) {
-            form.find('.alert').remove();
-
-            var feedbackContainer = '<div class="alert alert-##TYPE## alert-dismissible fade in" role="alert">' +
-                '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>' +
-                '##CONTENT##' +
-            '</div>';
-
-            feedbackContainer = feedbackContainer.replace('##TYPE##', type);
-            feedbackContainer = feedbackContainer.replace('##CONTENT##', message);
-
-            form.find('.modal-body').prepend(feedbackContainer);
-        };
-
         var form = $(this);
-        $.ajax({
-            type: 'POST',
-            url: form.attr('action'),
-            data: form.serialize(),
-            error: function(xhr) {
-                var error;
-                try {
-                    error = JSON.parse(xhr.responseText);
-                    error = error.error;
-                } catch(e) {
-                    error = 'An unknown error occured. Please retry later.';
-                }
 
-                feedback(form, 'danger', error);
-            },
-            success: function() {
-                feedback(form, 'success', 'Registration completed. Thanks for your support!');
-                form[0].reset();
+        lambda.invoke({
+            FunctionName: 'Misocell_SendBetaRegistration',
+            Payload: form.serialize()
+        }, function(err) {
+            if (err) {
+                return feedback(form, 'danger', err);
             }
+
+            feedback(form, 'success', 'Registration completed. Thanks for your support!');
+            form[0].reset();
         });
     });
 
