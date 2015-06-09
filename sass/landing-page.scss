@@ -101,6 +101,32 @@
     padding: 40px 0;
 }
 
+.launch-video {
+    position: relative;
+    .play {
+        @extend .glyphicon;
+        @extend .glyphicon-play-circle;
+        text-align: center;
+        font-size: 72px;
+        color: lighten($brand-primary, 30);
+        display: inline-block;
+        position: absolute;
+        width: 74px;
+        height: 74px;
+        background: #fff;
+        border-radius: 36px;
+        border: 2px solid #fff;
+        top: 50%;
+        left: 50%;
+        margin-left: -37px;
+        margin-top: -37px;
+        @include transition(all 0.5s ease);
+    }
+    &:hover .play {
+        color: $brand-primary;
+    }
+}
+
 #video-modal {
     .modal-dialog {
         width: 90%;
