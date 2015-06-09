@@ -8,7 +8,10 @@
     },
     "swig": {
         "globals": {
-            "cdn": "/"
+            "cdn": "/",
+            "contact": {
+                "email": "contact@misocell.io"
+            }
         }
     },
     "tracking": {
