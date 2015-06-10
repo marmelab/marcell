@@ -74,10 +74,20 @@ $(document).on('ready', function() {
     $('#beta_form_submit').removeAttr('disabled');
 
     // Screencast modal
+    var videoModal = $('#video-modal');
+
+    function resizeModal() {
+        $('.modal-content', videoModal).height($('iframe', videoModal).height());
+    }
+
+    resizeModal();
+
     $('.launch-video').click(function() {
         ga('send', 'event', 'VIDEO_TOUR_MODAL_OPENING', this.id);
-        $('#video-modal').modal('show');
+        videoModal.modal('show');
     });
+
+    $(window).resize(resizeModal);
 
     // Feature tooltips
     $('[data-toggle="tooltip"]').tooltip()

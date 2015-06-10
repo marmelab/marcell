@@ -37,9 +37,7 @@ module.exports = {
             }
         ]
     },
-    devServer: {
-        headers: { "Access-Control-Allow-Origin": "*" }
-    },
+    devtool: 'eval',
     plugins: [
         new ExtractTextPlugin('build/[name].css', {
             allChunks: true

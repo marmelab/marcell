@@ -158,16 +158,9 @@
 #video-modal {
     .modal-dialog {
         width: 90%;
-        height: 95%;
-        padding: 0;
+        max-width: 1280px;
     }
-
     .modal-content {
-        height: 90%;
         border-radius: 0;
-    }
-
-    .modal-body {
-        padding: 0;
     }
 }
