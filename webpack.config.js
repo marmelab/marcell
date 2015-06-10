@@ -19,7 +19,7 @@ module.exports = {
         ])
     },
     output: {
-        publicPath: 'http://localhost:8080/',
+        publicPath: process.env.NODE_ENV !== 'production' ? 'http://localhost:8080/' : '/',
         filename: 'build/[name].js'
     },
     module: {
