@@ -8,21 +8,34 @@ header {
     .navbar {
         margin-bottom: 0;
         @extend .navbar-fixed-top;
+        & > .container .navbar-brand {
+            margin: 0;
+        }
     }
     .navbar-default {
         background: $brand-primary;
+        padding: 10px 0;
         border: 0;
         a {
             color: $brand-primary-text !important;
         }
         .navbar-brand {
+            img {
+                display: inline-block;
+                margin-top: -8px;
+            }
             font-family: $title-font;
             font-size: 3em;
+            margin: 0;
+            @media (max-width: $screen-sm-max) {
+                width: 100%;
+                text-align: center;
+            }
         }
     }
     .navbar-nav > li > a {
-        padding-top: 18px;
-        padding-bottom: 12px;
+        padding-top: 22px;
+        padding-bottom: 10px;
     }
 }
 
