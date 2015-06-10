@@ -7,6 +7,7 @@ require('bootstrap-sass/assets/javascripts/bootstrap/modal');
 require('bootstrap-sass/assets/javascripts/bootstrap/transition');
 
 $(document).on('ready', function() {
+    // Beta subscription
     $('.subscribe-beta-button').click(function() {
         ga('send', 'event', 'BETA_SUBSCRIPTION_MODAL_OPENING', this.id);
         $('#beta-form-modal').modal('show');
@@ -72,4 +73,10 @@ $(document).on('ready', function() {
     });
 
     $('#beta_form_submit').removeAttr('disabled');
+
+    // Screencast modal
+    $('.launch-video').click(function() {
+        ga('send', 'event', 'VIDEO_TOUR_MODAL_OPENING', this.id);
+        $('#video-modal').modal('show');
+    });
 });
