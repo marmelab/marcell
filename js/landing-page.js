@@ -2,9 +2,8 @@ var $ = require('../node_modules/jquery/dist/jquery.js');
 global.jQuery = $;
 
 require('bootstrap-sass/assets/javascripts/bootstrap/alert');
-require('bootstrap-sass/assets/javascripts/bootstrap/carousel');
 require('bootstrap-sass/assets/javascripts/bootstrap/modal');
-require('bootstrap-sass/assets/javascripts/bootstrap/transition');
+require('bootstrap-sass/assets/javascripts/bootstrap/tooltip');
 
 $(document).on('ready', function() {
     // Beta subscription
@@ -79,4 +78,7 @@ $(document).on('ready', function() {
         ga('send', 'event', 'VIDEO_TOUR_MODAL_OPENING', this.id);
         $('#video-modal').modal('show');
     });
+
+    // Feature tooltips
+    $('[data-toggle="tooltip"]').tooltip()
 });

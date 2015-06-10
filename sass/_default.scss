@@ -7,7 +7,7 @@
 }
 body {
     font-family: "Open Sans";
-    text-align: justify;
+    font-size: 16px;
 }
 
 h1, h2, h3, h4, h5 {
@@ -27,6 +27,15 @@ li {
     margin-bottom: 4px;
 }
 
+blockquote {
+    border: 0;
+    font-style: italic;
+    .author {
+        color: #aaa;
+        font-style: normal;
+    }
+}
+
 button {
     @extend .btn;
     &[type="submit"] {
@@ -40,6 +49,11 @@ button {
 
 .responsive {
     max-width: 100%;
+}
+
+.highlighted {
+    background: $brand-dark-background;
+    color: $brand-dark-background-text;
 }
 
 // Make iframe and objects responsive

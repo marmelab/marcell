@@ -3,26 +3,34 @@
 @import "compass/css3/box-shadow";
 
 .motto {
-    @extend .container;
+    @extend .container-fluid;
+    @extend .highlighted;
     text-align: center;
-    padding: 30px 0;
+    padding: 130px 0;
+    img {
+        margin: 30px auto;
+        border-radius: 200px;
+    }
     blockquote {
+        background: none;
         border: 0;
         margin: 0;
         padding: 0;
         font-size: 2em;
     }
     .author {
-        text-align: right;
+        text-align: center;
+        margin: 20px auto;
     }
 }
 
 .overview {
     @extend .container-fluid;
     padding: 40px 0;
-    background: #eee;
-    h2 {
-        margin-bottom: 0.5em;
+    margin: 40px 0;
+    p {
+        padding: 40px 30px;
+        font-size: 1.7em;
     }
     img {
         margin-bottom: 1.5em;
@@ -52,41 +60,61 @@
     }
 }
 
-.main-feature, .testimonies {
-    @extend .container;
+.testimonials {
+    .testimonial {
+        @extend .container;
+        margin-bottom: 40px;
+        .picture {
+            @extend .col-md-2;
+            text-align: center;
+        }
+        .text {
+            @extend .col-md-10;
+            padding: 40px 0;
+        }
+    }
     margin: 60px auto;
 }
 
 .call-to-action {
     text-align: center;
+    margin: 60px 0;
     button {
         @extend .btn-lg;
-        background: $brand-primary;
+        padding: 20px;
+        font-weight: bold;
+        font-size: 1.5em;
+        background: $brand-highlighted;
         color: #fff;
     }
 }
 
 .mobile-compliant {
-    background: #eee;
+    @extend .highlighted;
     img {
         margin: -50px auto;
         border-radius: 50px;
     }
     margin-bottom: 110px;
 }
-
 .features {
     padding: 40px 0 40px;
-    background: #eee;
+    @extend .highlighted;
     article {
         @extend .container;
         .row {
             margin-bottom: 50px;
             .feature {
-                @extend .col-md-3;
+                @extend .col-sm-3;
                 text-align: center;
+                cursor: pointer;
+                img {
+                    height: 48px;
+                    display: inline-block;
+                }
                 h3 {
-                    font-size: 1.2em;
+                    font-size: 1.15em;
+                    font-family: "Open Sans";
                 }
                 p {
                     color: #444;
