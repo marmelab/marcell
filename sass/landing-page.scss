@@ -29,7 +29,13 @@
     padding: 40px 0;
     margin: 40px 0;
     p {
-        padding: 40px 30px;
+        @media (min-width: $screen-md-min) {
+            padding: 0 30px;
+        }
+        @media (min-width: $screen-lg-min) {
+            padding: 40px 30px;
+        }
+
         font-size: 1.7em;
     }
     img {
@@ -62,15 +68,33 @@
 
 .testimonials {
     .testimonial {
-        @extend .container;
+        @extend .clearfix;
         margin-bottom: 40px;
-        .picture {
-            @extend .col-md-2;
-            text-align: center;
+        blockquote {
+            padding: 60px 0;
+            @media (max-width: $screen-md-min) {
+                padding: 30px 0;
+            }
         }
-        .text {
-            @extend .col-md-10;
-            padding: 40px 0;
+        @media (max-width: $screen-sm-max) {
+            img {
+                display: block;
+                margin: auto;
+            }
+        }
+        @media (min-width: $screen-md-min) {
+            &:nth-child(odd) {
+                img {
+                    float: left;
+                    margin-right: 30px;
+                }
+            }
+            &:nth-child(even) {
+                img {
+                    float: right;
+                    margin-left: 30px;
+                }
+            }
         }
     }
     margin: 60px auto;
@@ -97,6 +121,7 @@
     }
     margin-bottom: 110px;
 }
+
 .features {
     padding: 40px 0 40px;
     @extend .highlighted;
@@ -104,8 +129,15 @@
         @extend .container;
         .row {
             margin-bottom: 50px;
+            @media (max-width: $screen-md-min) {
+                margin-bottom: 0;
+            }
             .feature {
                 @extend .col-sm-3;
+                @media (max-width: $screen-md-min) {
+                    margin: 50px auto;
+                }
+
                 text-align: center;
                 cursor: pointer;
                 img {
