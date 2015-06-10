@@ -1,0 +1,22 @@
+exclude:
+    - bower_components
+    - bower.json
+    - js # Original sources repository
+    - makefile
+    - node_modules
+    - npm-debug.log
+    - package.json
+    - README.md
+    - sass
+    - webpack.config.js
+
+sass:
+    style: :compressed
+
+config:
+    assets:
+        base_url: /
+    tracking:
+        google_analytics_id: UA-63305726-1
+    contact:
+        email: contact@misocell.io

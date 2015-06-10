@@ -7,8 +7,8 @@ require('bootstrap-sass/assets/javascripts/bootstrap/modal');
 require('bootstrap-sass/assets/javascripts/bootstrap/transition');
 
 $(document).on('ready', function() {
-    $('#beta_form_open_button').click(function() {
-        ga('send', 'event', 'BETA_SUBSCRIPTION_MODAL_OPENING');
+    $('.subscribe-beta-button').click(function() {
+        ga('send', 'event', 'BETA_SUBSCRIPTION_MODAL_OPENING', this.id);
         $('#beta-form-modal').modal('show');
     });
 

@@ -1,0 +1,12 @@
+{
+  "name": "misocell.io",
+  "version": "0.2.0",
+  "homepage": "http://misocell.io",
+  "authors": [
+    "marmelab <contact@marmelab.com>"
+  ],
+  "license": "Proprietary",
+  "dependencies": {
+    "bootstrap-sass": "~3.3.4"
+  }
+}

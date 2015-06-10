@@ -1,14 +1,23 @@
-# Marcell
+# misocell.io
 
-## Development
+## Production deployment
 
-``` sh
-docker-compose up
-```
-
-## Production
+Production hosting is done on Amazon S3. You should then have the AWS CLI tool installed:
 
 ``` sh
-npm run build
-npm start
+sudo apt-get install python-pip
+pip install awscli
 ```
+
+Then, configure (if not already done) your AWS credentials:
+
+``` sh
+aws configure
+```
+
+Finally, deploy on production with:
+
+``` sh
+make deploy
+```
+

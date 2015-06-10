@@ -1,4 +1,3 @@
-var config = require('config');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var webpack = require('webpack');
 
@@ -9,20 +8,19 @@ function getEntrySources(sources) {
 
     return sources;
 }
+
 var node_modules = require('path').resolve(__dirname, 'node_modules');
 
 module.exports = {
     entry: {
         landingPage: getEntrySources([
-            './sass/style.scss',
             './sass/landing-page.scss',
-            './js/analytics.js',
             './js/landing-page.js'
         ])
     },
     output: {
         publicPath: 'http://localhost:8080/',
-        filename: '/js/[name].js'
+        filename: 'build/[name].js'
     },
     module: {
         loaders: [
@@ -43,10 +41,7 @@ module.exports = {
         headers: { "Access-Control-Allow-Origin": "*" }
     },
     plugins: [
-        new webpack.DefinePlugin({
-            GOOGLE_ANALYTICS_ID: '"' + config.tracking.google_analytics_id + '"'
-        }),
-        new ExtractTextPlugin('/css/[name].css', {
+        new ExtractTextPlugin('build/[name].css', {
             allChunks: true
         })
     ]

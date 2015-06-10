@@ -1,7 +1,6 @@
-@import "variables";
-@import "layout";
+@import "./variables";
+@import "./layout";
 
-@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 * {
     box-sizing: border-box;
@@ -41,4 +40,16 @@ button {
 
 .responsive {
     max-width: 100%;
+}
+
+// Fixing Bootstrap issue (see https://github.com/twbs/bootstrap/issues/14040)
+.modal-open .navbar-fixed-top {
+    padding-right: 15px;
+}
+
+.modal-dialog {
+    .modal-header {
+        background: $brand-primary;
+        color: $brand-primary-text;
+    }
 }
