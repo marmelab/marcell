@@ -1,0 +1,10 @@
+module.exports = {
+    transport: {
+        service: 'xxx',
+        auth: {
+            user: 'xxx@xxx.com',
+            pass: 'xxx'
+        }
+    },
+    recipient: 'xxx'
+};
