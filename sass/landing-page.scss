@@ -3,26 +3,40 @@
 @import "compass/css3/box-shadow";
 
 .motto {
-    @extend .container;
+    @extend .container-fluid;
+    @extend .highlighted;
     text-align: center;
-    padding: 30px 0;
+    padding: 130px 0;
+    img {
+        margin: 30px auto;
+        border-radius: 200px;
+    }
     blockquote {
+        background: none;
         border: 0;
         margin: 0;
         padding: 0;
         font-size: 2em;
     }
     .author {
-        text-align: right;
+        text-align: center;
+        margin: 20px auto;
     }
 }
 
 .overview {
     @extend .container-fluid;
     padding: 40px 0;
-    background: #eee;
-    h2 {
-        margin-bottom: 0.5em;
+    margin: 40px 0;
+    p {
+        @media (min-width: $screen-md-min) {
+            padding: 0 30px;
+        }
+        @media (min-width: $screen-lg-min) {
+            padding: 40px 30px;
+        }
+
+        font-size: 1.9em;
     }
     img {
         margin-bottom: 1.5em;
@@ -52,22 +66,55 @@
     }
 }
 
-.main-feature, .testimonies {
-    @extend .container;
+.testimonials {
+    .testimonial {
+        @extend .clearfix;
+        margin-bottom: 40px;
+        blockquote {
+            padding: 60px 0;
+            @media (max-width: $screen-md-min) {
+                padding: 30px 0;
+            }
+        }
+        @media (max-width: $screen-sm-max) {
+            img {
+                display: block;
+                margin: auto;
+            }
+        }
+        @media (min-width: $screen-md-min) {
+            &:nth-child(odd) {
+                img {
+                    float: left;
+                    margin-right: 30px;
+                }
+            }
+            &:nth-child(even) {
+                img {
+                    float: right;
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
     margin: 60px auto;
 }
 
 .call-to-action {
     text-align: center;
+    margin: 60px 0;
     button {
         @extend .btn-lg;
-        background: $brand-primary;
+        padding: 20px;
+        font-weight: bold;
+        font-size: 1.5em;
+        background: $brand-highlighted;
         color: #fff;
     }
 }
 
 .mobile-compliant {
-    background: #eee;
+    @extend .highlighted;
     img {
         margin: -50px auto;
         border-radius: 50px;
@@ -77,16 +124,29 @@
 
 .features {
     padding: 40px 0 40px;
-    background: #eee;
+    @extend .highlighted;
     article {
         @extend .container;
         .row {
             margin-bottom: 50px;
+            @media (max-width: $screen-md-min) {
+                margin-bottom: 0;
+            }
             .feature {
-                @extend .col-md-3;
+                @extend .col-sm-3;
+                @media (max-width: $screen-md-min) {
+                    margin: 50px auto;
+                }
+
                 text-align: center;
+                cursor: pointer;
+                img {
+                    height: 48px;
+                    display: inline-block;
+                }
                 h3 {
-                    font-size: 1.2em;
+                    font-size: 1.15em;
+                    font-family: "Open Sans";
                 }
                 p {
                     color: #444;
@@ -130,16 +190,9 @@
 #video-modal {
     .modal-dialog {
         width: 90%;
-        height: 95%;
-        padding: 0;
+        max-width: 1280px;
     }
-
     .modal-content {
-        height: 90%;
         border-radius: 0;
-    }
-
-    .modal-body {
-        padding: 0;
     }
 }

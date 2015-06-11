@@ -15,8 +15,9 @@ webpack:
 deploy: install
 	NODE_ENV=production ./node_modules/webpack/bin/webpack.js -p --optimize-minimize --optimize-occurence-order --optimize-dedupe --progress
 	docker run --rm -v "$$PWD:/src" grahamc/jekyll build --config _config_prod.yml
-	aws s3 sync _site/ s3://misocell.io
 	rm -Rf build fonts
+	sudo chown -R `whoami` _site # @TODO: find a way to get correct permissions from Docker
+	aws s3 sync _site/ s3://misocell.io
 
 deploy_lambda:
 	@rm -Rf /tmp/Misocell*
