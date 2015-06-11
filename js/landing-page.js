@@ -94,7 +94,7 @@ $(document).on('ready', function() {
             screencastPlayer = new YT.Player('screencast', {
                 height: 315,
                 width: 560,
-                videoId: '9ozgSzpFxEM',
+                videoId: 'GQlaMUiJ4fI',
                 playerVars: {
                     showInfo: 0,
                     rel: 0,
