@@ -31,8 +31,14 @@ $(document).on('ready', function() {
         secretAccessKey: 'NbLMNKeQKVI6UUsEmPDiPoQOTb7wGU0Z3x/jBlb5'
     });
 
+    var submitButton = $('#beta_form_submit');
+
     $('#beta_form').on('submit', function(e) {
         e.preventDefault();
+
+        $('.alert').hide();
+        $('.loader').show();
+        submitButton.attr('disabled', 'disabled');
 
         var email = $('#email').val();
         ga('send', 'event', 'BETA_SUBSCRIPTION_FORM_SENT', email);
@@ -46,6 +52,9 @@ $(document).on('ready', function() {
             FunctionName: 'Misocell_SendBetaSubscription',
             Payload: JSON.stringify(payload)
         }, function(err) {
+            $('.loader').hide();
+            submitButton.removeAttr('disabled');
+
             if (err) {
                 return feedback(form, 'danger', err);
             }
@@ -55,7 +64,7 @@ $(document).on('ready', function() {
         });
     });
 
-    $('#beta_form_submit').removeAttr('disabled');
+    submitButton.removeAttr('disabled');
 
     (function smoothScroll() {
         var BODY_TOP_PADDING = 60;
