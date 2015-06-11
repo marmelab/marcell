@@ -27,8 +27,8 @@ $(document).on('ready', function() {
 
     var lambda = new AWS.Lambda({
         region: 'eu-west-1',
-        accessKeyId: 'xxx',
-        secretAccessKey: 'xxx'
+        accessKeyId: 'AKIAJN7DXEQTK3L3XTSA',
+        secretAccessKey: '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'
     });
 
     $('#beta_form').on('submit', function(e) {

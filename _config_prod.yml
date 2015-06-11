@@ -20,4 +20,4 @@ config:
     tracking:
         google_analytics_id: UA-63305726-1
     contact:
-        email: contact@misocell.io
+        email: info@misocell.io
