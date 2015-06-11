@@ -56,6 +56,21 @@ button {
     color: $brand-dark-background-text;
 }
 
+.loader {
+    background: url('/img/loader.gif') no-repeat 50% 0;
+    margin: 20px auto 0;
+    height: 40px;
+    display: none;
+}
+
+.envelope {
+    @extend .glyphicon;
+    @extend .glyphicon-envelope;
+    position: relative;
+    top: 4px;
+    margin-right: 2px;
+}
+
 // Make iframe and objects responsive
 .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin-bottom: 20px; }
 .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
