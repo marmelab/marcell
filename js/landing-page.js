@@ -111,6 +111,11 @@ $(document).on('ready', function() {
             $('.modal-content', videoModal).height($('iframe', videoModal).height());
         }
 
+        function playVideo() {
+            if(screencastPlayer.playVideo) screencastPlayer.playVideo();
+            else setTimeout(function() { playVideo(); }, 500);
+        }
+
         $('.launch-video').click(function() {
             ga('send', 'event', 'VIDEO_TOUR_MODAL_OPENING', this.id);
             resizeModal();
@@ -118,11 +123,13 @@ $(document).on('ready', function() {
         });
 
         videoModal.on('show.bs.modal', function(e) {
-            screencastPlayer.playVideo();
+            playVideo();
         });
 
         videoModal.on('hide.bs.modal', function(e) {
-            screencastPlayer.pauseVideo();
+            if (screencastPlayer.pauseVideo) {
+                screencastPlayer.pauseVideo();
+            }
         });
 
         $(window).resize(resizeModal);
