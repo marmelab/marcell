@@ -3,7 +3,7 @@ serve:
 
 install:
 	npm install
-	bower install
+	./node_modules/.bin/bower install
 	cd lambda/SendBetaSubscription && npm install
 
 jekyll:
@@ -17,7 +17,7 @@ deploy: install
 	docker run --rm -v "$$PWD:/src" grahamc/jekyll build --config _config_prod.yml
 	rm -Rf build fonts
 	sudo chown -R `whoami` _site # @TODO: find a way to get correct permissions from Docker
-	aws s3 sync _site/ s3://www.misocell.io
+	aws --profile=marmelab s3 sync _site/ s3://www.misocell.io
 
 deploy_lambda:
 	@rm -Rf /tmp/Misocell*
